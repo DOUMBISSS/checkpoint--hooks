@@ -1,4 +1,5 @@
 import React from 'react'
+// import { FaDropbox } from 'react-icons/fa';
 
 function MovieCard({movie}) {
   return (
@@ -11,7 +12,13 @@ function MovieCard({movie}) {
           </div>
           <div className="cards--content">
                 <h3>{movie.nameMovie}</h3>
-                {/* <h4>Duration :{movie.Duration}</h4> */}
+                {/* <h4><FaBluetooth /></h4> */}
+                <h4>Duration :{movie.Duration}</h4>
+                <h3>{movie.posterUrl}</h3>
+                <div className='btn--movie'>
+                  <button className='btn--movie--one'>Play</button>
+                  <button className='btn--movie--two'>Plus d'infos </button>
+                </div>
           </div>
     </div>
 

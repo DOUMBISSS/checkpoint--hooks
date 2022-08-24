@@ -1,8 +1,10 @@
-
 import './App.css';
 import { useState } from 'react';
 import MovieList from './MovieList';
 import AddMovie from './AddMovie';
+import Navbar from './Navbar';
+import {Routes,Route,Link} from 'react-router-dom'
+// import {Routes,Route} from 'react-router-dom';
 
 
 function App() {
@@ -23,34 +25,17 @@ function App() {
     newState.push(movie);
     setMovies(newState);
   }
-
+  const [searchFilter, setSearchFilter] = useState("");
   
   return (
     <div>
-    <header>
-     <div className="navbar">
-         <div className="navbar--left">
-             <h1>React Movie Studio</h1>
-         </div>
-         <div className="navbar--right">
-             <div className='categories'>
-               <ul>
-                 <li>Accueil</li>
-                 <li>Séries</li>
-                 <li>Films</li>
-                 <li>Nouveautés</li>
-                 <li>Ma liste</li>
-                 <li>Téléchargement</li>
-                 <li>Sign Up</li>
-               </ul>
-             </div>
-             <input type="text" placeholder="Rechercher un film" />
-         </div>
-     </div>
-   </header>
+      <Navbar setSearchFilter={setSearchFilter}/>
       <AddMovie addNewMovie={addMovie}/>
-      <MovieList movies={movies}/>
+      <MovieList movies={movies} searchFilter={searchFilter}/>
     </div>
+    // <Routes>
+    //   <Route path="/" component={Home}/>
+    // </Routes>
   );
 }
 
