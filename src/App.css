@@ -271,6 +271,12 @@ span{
   align-items: center;
   justify-content: center;
 }
+/* .btns--return{
+  text-decoration:none ;
+  background-color: cornflowerblue;
+  color: white;
+  font-weight: 800;
+} */
 .btn--movie{
   width: 100%;
 }

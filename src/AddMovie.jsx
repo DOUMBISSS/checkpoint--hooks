@@ -1,12 +1,13 @@
-import React from 'react'
-import { useState } from 'react'
+import React from 'react';
+import { useState } from 'react';
+// import { uid } from 'uid';
 
 function AddMovie({addNewMovie}) {
 
     const [name, setName] = useState("");
         const addMovie = () => {
             const movie = {
-            // id :"uid()",
+            // id :uid(),
             img : "day.jpg",
             nameMovie :name,
             videoLink : videoLink,

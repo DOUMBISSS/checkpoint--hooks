@@ -16,12 +16,15 @@ function MovieDetails({movies}) {
                   <div className='movie--cards--images'>
                         <div className='movie--cards--images--box'>
                           {/* <img src={process.env.REACT_APP_PUBLIC_URL + movie.img} alt="" /> */}
-                          <iframe width="756" 
+                          <iframe 
+                          width="756" 
                           height="425" 
                           src={movie.videoLink} 
                           title="Didi B ft. Jr Low, Tam Sir  - En Haut (Official Music Video)" 
                           frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                          allowFullscreen></iframe>
+                          allowFullscreen>
+
+                          </iframe>
                         </div>
                   </div>
                 <div className='movie--cards--description'>
@@ -41,10 +44,10 @@ function MovieDetails({movies}) {
                         </div>
                       </div>
 
-                      <div className='movie--cards--description--content--footer'>
+                      {/* <div className='movie--cards--description--content--footer'>
                           <button className='btn--details'>Bande annonce</button>
                           <button className='btn--play'>Play</button>
-                      </div>
+                      </div> */}
                     </div>
                 </div>
             </div>
