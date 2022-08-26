@@ -6,9 +6,10 @@ function AddMovie({addNewMovie}) {
     const [name, setName] = useState("");
         const addMovie = () => {
             const movie = {
+            // id :"uid()",
             img : "day.jpg",
             nameMovie :name,
-            posterUrl : posterUrl,
+            videoLink : videoLink,
             Duration :duration
         }
             addNewMovie(movie);
@@ -17,10 +18,10 @@ function AddMovie({addNewMovie}) {
         setName(event.target.value);
     }
 
-    const [posterUrl, setPosterUrl] = useState("");
+    const [videoLink, setvideoLink] = useState("");
             
-    const handlePosterUrl = (event) => {
-        setPosterUrl(event.target.value);
+    const handlevideoLink = (event) => {
+        setvideoLink(event.target.value);
     }
     const [duration, setDuration] = useState("");
             
@@ -32,7 +33,7 @@ function AddMovie({addNewMovie}) {
   return (
     <div className="search--bar">
         <input type="text" placeholder='movieName' onChange={handleName}/>
-        <input type="url"placeholder='movieUrl' onChange={handlePosterUrl}/>
+        <input type="url"placeholder='Link' onChange={handlevideoLink}/>
         <input type="url"placeholder='Duration' onChange={handleDuration}/>
         <input type="file" />
         <button className="add--btn--movie" onClick={addMovie}>Ajouter un film</button>

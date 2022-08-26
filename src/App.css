@@ -104,7 +104,7 @@ input[type="file"]{
 }
 .cards{
   width: 270px;
-  height: 350px;
+  height: 270px;
   margin: 5px;
   border-radius: 0.5rem;
   background-color: rgb(231, 230, 230);
@@ -118,7 +118,7 @@ input[type="file"]{
 }
 .cards--images{
   width: 100%;
-  height: 45%;
+  height: 55%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -137,8 +137,14 @@ input[type="file"]{
 }
 .cards--content{
   width: 100%;
-  height: 55%;
+  height: 45%;
   text-align: center;
+}
+.cards--content--box{
+  width: 100%;
+  /* display: flex;
+  align-items: center;
+  justify-content: space-around; */
 }
 .button--block{
   width: 100%;
@@ -165,11 +171,7 @@ button{
 }
 .movie--cards{
   width: 100%;
-  height: 100vh;
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
-  padding: 1rem;
+  height: 90vh;
 }
 .movie--cards--content{
   width: 100%;
@@ -180,15 +182,14 @@ button{
   justify-content: center;
 }
 .movie--cards--images{
-  width: 50%;
+  width: 60%;
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 .movie--cards--images--box{
-  width: 600px;
-  height: 600px;
+  width: 500px;
+  height: 500px;
   border-radius: 0.5rem;
 }
 .movie--cards--images--box img{
@@ -273,7 +274,7 @@ span{
 .btn--movie{
   width: 100%;
 }
-.btn--movie--one{
+.btn--play{
   width: 200px;
   padding: 0.3rem;
   background-color: black;
@@ -282,12 +283,23 @@ span{
   margin: 0.5rem;
   cursor: pointer;
 }
-.btn--movie--two{
+.btn--details{
   width: 200px;
   padding: 0.3rem;
-  background-color: coral;
+  background-color: black;
   color: white;
   border-radius: 10px;
   margin: 0.5rem;
   cursor: pointer;
+}
+.link{
+  text-decoration:none ;
+  color: white;
+  font-weight: 800;
+}
+.link:hover{
+  color:coral;
+}
+.duration{
+  font-weight: normal;
 }

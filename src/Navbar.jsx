@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 function Navbar ({setSearchFilter}) {
             
@@ -16,10 +17,10 @@ function Navbar ({setSearchFilter}) {
          <div className="navbar--right">
              <div className='categories'>
                <ul>
-                 <li>Accueil</li>
-                 <li>Séries</li>
-                 <li>Films</li>
-                 <li>Nouveautés</li>
+                 <li><Link className='link' to="/">Accueil</Link></li>
+                 <li><Link className='link' to="/series">Series</Link></li>
+                 <li><Link className='link' to="/films">Films</Link></li>
+                 <li><Link className='link' to="/nouveautes">Nouveautés</Link></li>
                  <li>Ma liste</li>
                  <li>Téléchargement</li>
                  <li>Sign Up</li>
