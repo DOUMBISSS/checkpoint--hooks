@@ -1,19 +1,20 @@
 import React from 'react';
 import { useState } from 'react';
-// import { uid } from 'uid';
+import { uid } from 'uid';
 
 function AddMovie({addNewMovie}) {
 
     const [name, setName] = useState("");
         const addMovie = () => {
             const movie = {
-            // id :uid(),
+            id :uid(),
             img : "day.jpg",
             nameMovie :name,
             videoLink : videoLink,
-            Duration :duration
+            Duration :duration,
         }
             addNewMovie(movie);
+            setName("")
     }
     const handleName = (event) => {
         setName(event.target.value);
@@ -33,7 +34,7 @@ function AddMovie({addNewMovie}) {
 
   return (
     <div className="search--bar">
-        <input type="text" placeholder='movieName' onChange={handleName}/>
+        <input type="text" placeholder='movieName' onChange={handleName} value={name} />
         <input type="url"placeholder='Link' onChange={handlevideoLink}/>
         <input type="url"placeholder='Duration' onChange={handleDuration}/>
         <input type="file" />

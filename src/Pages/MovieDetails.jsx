@@ -5,8 +5,8 @@ import {Link} from 'react-router-dom';
 
 function MovieDetails({movies}) {
 
-  let id = parseInt(useParams().id);
-  let movie =movies.find(movie => movie.id === id);
+  let id = useParams().id;
+  let movie =movies.find(movie => movie.id == id);
   console.log(process.env.REACT_APP_PUBLIC_URL)
   return (
        <div>
