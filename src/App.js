@@ -9,7 +9,7 @@ import Series from './Pages/Series'
 import Nouveautes from './Pages/Nouveautes'
 import Films from './Pages/Films'
 import { useState } from 'react';
-import { uid } from 'uid';
+// import { uid } from 'uid';
 
 
 function App({setSearchFilter}) {

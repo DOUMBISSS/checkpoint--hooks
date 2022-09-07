@@ -1,12 +1,25 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import { useState } from 'react';
 
-function Navbar ({setSearchFilter}) {
+function Navbar ({setSearchFilter,setDisplay,display}) {
             
     const handlesetSearchFilter = (event) => {
       let value = event.target.value;
       setSearchFilter(value);
     }
+
+  
+// const afficher = () => {
+//   setDisplay(!display)
+// }
+const afficher = () => {
+  setDisplay(true)
+}
+// const affi = () => {
+//   setDisplay(false)
+// }
+          
 
     return (
     <header>
@@ -24,6 +37,7 @@ function Navbar ({setSearchFilter}) {
                  <li>Ma liste</li>
                  <li>Téléchargement</li>
                  <li>Sign Up</li>
+                 <li><button className="add--btn--movie" onClick={afficher}>Ajouter un film</button></li>
                </ul>
              </div>
              <input type="text" placeholder="Rechercher un film" onChange={handlesetSearchFilter} />

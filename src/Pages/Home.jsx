@@ -15,11 +15,12 @@ function Home ({movies,setMovies}) {
         setMovies(newState);
       }
       const [searchFilter, setSearchFilter] = useState("");
+      const [display, setDisplay] = useState(false);
     
     return (
         <div>
-        <Navbar setSearchFilter={setSearchFilter}/>
-        <AddMovie addNewMovie={addMovie}/>
+        <Navbar setSearchFilter={setSearchFilter} setDisplay={setDisplay} display={display} />
+        <AddMovie addNewMovie={addMovie}display={display} setDisplay={setDisplay}/>
         <MovieList movies={movies} searchFilter={searchFilter}/>
       </div>
     )

@@ -3,6 +3,7 @@ import MovieCard from './MovieCard';
 // import { VscDebugStart } from 'react-icons/fa';
 
 function MovieList({movies,searchFilter}) {
+        
   return (
       <div>
         <div className="container--content">
@@ -18,10 +19,9 @@ function MovieList({movies,searchFilter}) {
             }).map((movie, i) => <MovieCard key={i}  movie={movie}/>)}
               </div>
         </div>
-       
-
 
       </div>
+
   )
 }
 
